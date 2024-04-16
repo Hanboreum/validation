@@ -23,3 +23,12 @@ public class UserRegisterRequest {
     private LocalDateTime registerAt;
 
 }
+/*
+{
+  "name": "이름",
+  "age": 30,
+  "email": "name@example.com",
+  "phone_number": "1234567890",
+  "register_at": "2024-04-16T12:00:00"
+}
+ */
