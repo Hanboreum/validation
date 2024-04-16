@@ -1,11 +1,9 @@
 package com.example.validation.controller;
 
 import com.example.validation.model.UserRegisterRequest;
+import jakarta.validation.Valid;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @Slf4j
 @RestController
@@ -13,8 +11,10 @@ import org.springframework.web.bind.annotation.RestController;
 public class UserApiController {
 
     //가입
-    @GetMapping("")
-    public UserRegisterRequest register(@RequestBody UserRegisterRequest user){
+    @PostMapping("")
+    public UserRegisterRequest register(
+            @Valid //검증
+            @RequestBody UserRegisterRequest user){
         log.info("userRequest : {}", user);
 
         return user;
