@@ -34,7 +34,7 @@ public class UserRegisterRequest {
     @Email
     private String email;
 
-    @Pattern(regexp = "^\\d{2,3}-\\d{3,4}-\\d{4}$") //폰번호 검증 정규식
+    @Pattern(regexp = "^\\d{2,3}-\\d{3,4}-\\d{4}$", message = "휴대폰 번호 방식에 맞지 않습니다.") //폰번호 검증 정규식 010-
     private String phoneNumber;
 
     @FutureOrPresent //현재 혹은 미래
@@ -44,9 +44,10 @@ public class UserRegisterRequest {
 /*
 {
   "name": "이름",
+  "password": "dfs",
   "age": 30,
   "email": "name@example.com",
-  "phone_number": "1234567890",
-  "register_at": "2024-04-16T12:00:00"
+  "phone_number": "010-1234-5678",
+  "register_at": "2024-04-17T12:00:00"
 }
  */
