@@ -1,5 +1,7 @@
 package com.example.validation.model;
 
+import com.fasterxml.jackson.databind.PropertyNamingStrategies;
+import com.fasterxml.jackson.databind.annotation.JsonNaming;
 import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -12,6 +14,7 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
+@JsonNaming(value= PropertyNamingStrategies.SnakeCaseStrategy.class)
 public class Api<T> {
 
     private String resultCode;
