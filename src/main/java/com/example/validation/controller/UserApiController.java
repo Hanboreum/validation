@@ -22,8 +22,8 @@ public class UserApiController {
     public  Api<UserRegisterRequest>  register( //요청 할 때도 Api스펙을 통해 리턴.
                                                           //Api<? extends Objects> , wildcard. 어떤 타입인진 모르지만 object 상속 받은 애를 리턴할거야
                                                           @Valid //검증
-            @RequestBody Api<UserRegisterRequest> user, //요청도 Api스펙으로 요청
-                                                          BindingResult bindingResult){  //해당 valid 실행시 결과를 bindingresult에 담아줌
+            @RequestBody Api<UserRegisterRequest> user //요청도 Api스펙으로 요청
+                                                          ){  //해당 valid 실행시 결과를 bindingresult에 담아줌
         //이제 서버는 항상Api라는 스펙을 통해서만 제이슨을 보낼 수 있음
         log.info("userRequest : {}", user);
 
