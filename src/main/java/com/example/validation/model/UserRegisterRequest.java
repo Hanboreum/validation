@@ -43,11 +43,18 @@ public class UserRegisterRequest {
 }
 /*
 {
-  "name": "이름",
-  "password": "dfs",
-  "age": 30,
-  "email": "name@example.com",
-  "phone_number": "010-1234-5678",
-  "register_at": "2024-04-17T12:00:00"
+ "result_code" : "",
+ "result+message" : "",
+ "data" : {}, //오브젝트 표시
+ "error" : {}
+
+  {
+    "name": "이름",
+    "password": "dfs",
+    "age": 30,
+    "email": "name@example.com",
+    "phone_number": "010-1234-5678",
+    "register_at": "2024-04-17T12:00:00"
+  }
 }
  */

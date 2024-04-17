@@ -1,5 +1,6 @@
 package com.example.validation.model;
 
+import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -15,6 +16,8 @@ public class Api<T> {
 
     private String resultCode;
     private String resultMessage;
+
+    @Valid //검증한다고 지정
     private T data;
     private Error error;
 
@@ -28,3 +31,30 @@ public class Api<T> {
     }
 
 }
+/*
+{
+ "result_code" : "",
+ "result+message" : "",
+ "data" : {}, //오브젝트 표시
+ "error" : { error_message}
+}
+---
+{
+  "result_code": "200",
+  "result_message": "Success",
+  "data": {
+    "name": "이름",
+    "password": "dfs",
+    "age": 30,
+    "email": "name@example.com",
+    "phone_number": "010-1234-5678",
+    "register_at": "2024-04-17T12:00:00"
+  },
+  "error": {
+    "error_message": [
+      "Error occurred during processing"
+    ]
+  }
+}
+
+ */
