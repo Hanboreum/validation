@@ -1,5 +1,6 @@
 package com.example.validation.model;
 
+import com.example.validation.annotation.PhoneNumber;
 import com.fasterxml.jackson.databind.PropertyNamingStrategies;
 import com.fasterxml.jackson.databind.annotation.JsonNaming;
 import jakarta.validation.constraints.*;
@@ -36,7 +37,8 @@ public class UserRegisterRequest {
     @Email
     private String email;
 
-    @Pattern(regexp = "^\\d{2,3}-\\d{3,4}-\\d{4}$", message = "휴대폰 번호 방식에 맞지 않습니다.") //폰번호 검증 정규식 010-
+    //@Pattern(regexp = "^\\d{2,3}-\\d{3,4}-\\d{4}$", message = "휴대폰 번호 방식에 맞지 않습니다.") //폰번호 검증 정규식 010-
+    @PhoneNumber
     private String phoneNumber;
 
     @FutureOrPresent //현재 혹은 미래
