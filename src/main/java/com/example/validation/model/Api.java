@@ -28,6 +28,8 @@ public class Api<T> {
     @NoArgsConstructor
     @AllArgsConstructor
     @Builder
+    @JsonNaming(value = PropertyNamingStrategies.SnakeCaseStrategy.class
+    )
     public static class Error{
         //에러를 담아줄 에러 객체
         private List<String> errorMessage;
