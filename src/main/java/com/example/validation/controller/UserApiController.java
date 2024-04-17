@@ -18,7 +18,7 @@ public class UserApiController {
 
     //가입
     @PostMapping("")
-    public Api<? extends Objects> register( //요청 할 때도 Api스펙을 통해 리턴.
+    public Api<? extends Object> register( //요청 할 때도 Api스펙을 통해 리턴.
                                             //Api<? extends Objects> , wildcard. 어떤 타입인진 모르지만 object 상속 받은 애를 리턴할거야
                                   @Valid //검증
             @RequestBody Api<UserRegisterRequest> user, //요청도 Api스펙으로 요청
